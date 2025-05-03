@@ -10,7 +10,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-
+		<script src="https://unpkg.com/lottie-web@5.9.4/build/player/lottie.min.js"></script>
+		
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -32,6 +33,7 @@
 			  <nav>
 				<ul>
 				  <li><a href="#intro">Intro</a></li>
+				  <li><a href="#head">Bafa Shoppit</a></li>
 				  <li><a href="#work">Work</a></li>
 				  <li><a href="#about">About</a></li>
 				  <li><a href="#contact">Contact</a></li>
@@ -49,6 +51,51 @@
 					<p>Je suis Charles Yao, un passionné d'informatique depuis toujours. Mon parcours combine le développement web fullstack et la cybersécurité offensive (pentesting). J’aime concevoir des solutions numériques complètes, de l’interface utilisateur jusqu’à l’architecture backend, tout en assurant leur sécurité.</p>
 					<p>J’ai créé <strong>Bafa Shoppit</strong>, une plateforme en ligne spécialisée dans la <strong>vente d’ordinateurs, accessoires informatiques et équipements technologiques</strong>. Le site permet aux utilisateurs de découvrir et d’acheter facilement des produits de qualité, avec une interface moderne et un processus d’achat fluide. Shoppit allie performance, sécurité et praticité pour offrir une excellente expérience client.</p>
 					<p>Découvrez la boutique ici : <a href="https://bafa.onrender.com/" target="_blank">Bafa shoppit</a></p>
+				</article>
+				<article id="head">
+					<h2 class="major">About Bafa Shoppit</h2>
+					<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+					<!-- Description section -->
+					 <section class="hero">
+    <div id="lottie-animation" style="width: 250px; height: 250px; margin-bottom: 20px;"></div>
+    <h1 class="display-4 fw-bold animated-text">Welcome on Bafa shoppit</h1>
+    <p class="lead animated-text">La référence en Côte d'Ivoire pour l'achat d'ordinateurs et de matériel informatique</p>
+    <a href="https://bafa.onrender.com" class="btn btn-light mt-4">Visiter la boutique</a>
+  </section>
+  <section class="container my-5">
+    <h2 class="section-title">Pourquoi choisir Shoppit ?</h2>
+    <p>
+      Bafa Shoppit est une plateforme de vente en ligne dédiée à l'informatique. Que vous soyez un professionnel, un étudiant ou un particulier, nous vous offrons :
+    </p>
+    <ul>
+      <li>💻 Des ordinateurs portables et fixes de haute qualité</li>
+      <li>🖱️ Des accessoires variés : souris, claviers, casques, etc.</li>
+      <li>⚡ Une interface simple, fluide et rapide pour commander</li>
+      <li>🔒 Un processus d’achat sécurisé et fiable</li>
+    </ul>
+    <p>
+      Nous croyons en un service client de qualité, à l'écoute et réactif, ainsi qu’à des produits soigneusement sélectionnés.
+    </p>
+  </section>
+
+  <!-- Founder section -->
+  <section class="bg-dark text-white py-5">
+    <div class="container text-center">
+      <h2 class="section-title">À propos du fondateur</h2>
+      <p>
+       Bafa Shoppit a été fondé par <strong>Charles Yao</strong>, développeur fullstack et pentester, avec la vision de moderniser l’achat de matériel informatique en Afrique francophone.
+      </p>
+      <p>
+        Son expertise dans la conception de solutions numériques performantes et sécurisées garantit à Shoppit une plateforme fiable et évolutive.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <p>&copy; 2025 Bafa Shoppit by Charles Yao. Tous droits réservés.</p>
+  </footer>
+
 				</article>
 		  
 		
@@ -119,6 +166,26 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				// Lottie animation
+				lottie.loadAnimation({
+				  container: document.getElementById('lottie-animation'),
+				  renderer: 'svg',
+				  loop: true,
+				  autoplay: true,
+				  path: 'https://assets1.lottiefiles.com/packages/lf20_svy4ivvy.json'
+				});
+			
+				// Changement de couleur du texte seulement
+				const colors = ['#FF5733', '#33FF57', '#337BFF', '#F39C12', '#9B59B6'];
+				let i = 0;
+			
+				setInterval(() => {
+				  document.querySelectorAll('.animated-text').forEach(el => {
+					el.style.color = colors[i];
+				  });
+				  i = (i + 1) % colors.length;
+				}, 5000);
+			  </script>
 	</body>
 </html>
